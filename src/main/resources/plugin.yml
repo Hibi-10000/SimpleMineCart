@@ -1,0 +1,53 @@
+name: SimpleMineCart
+main: jp.minecraft.hibi_10000.plugins.SimpleMineCart
+version: ${project.version}
+author: Hibi_10000
+api-version: 1.16
+website: https://github.com/Hibi-10000/SimpleMineCart
+commands:
+    smc:
+      alias: [aimpleminecart]
+      description: SimpleMineCart config reload command.
+      permission: simpleminecart.reload
+      permission-message: Unknown command. Type "/help" for help.
+permissions:
+  simpleminecart:
+    default: op
+    children:
+      simpleminecart.command: true
+  simpleminecart.command:
+    default: false
+    children:
+      simpleminecart.command.*: true
+  simpleminecart.command.*:
+    default: false
+    children:
+      simpleminecart.command.use: true
+      simpleminecart.command.help: true
+      simpleminecart.command.reload: true
+      simpleminecart.command.smctoggle: true
+      simpleminecart.command.smctoggle.force: true
+  simpleminecart.command.use:
+    default: false
+  simpleminecart.command.help:
+    default: false
+    children:
+      simpleminecart.command.use: true
+  simpleminecart.command.reload:
+    description:  SimpleMineCart \"/smc reload\" command use permission.
+    default: false
+    children:
+      simpleminecart.command.use: true
+      simpleminecart.command.help: true
+  simpleminecart.command.smctoggle:
+    default:  false
+    children:
+      simpleminecart.command.use: true
+      simpleminecart.command.help: true
+  simpleminecart.command.smctoggle.force:
+    default: false
+    children:
+      simpleminecart.command.use: true
+      simpleminecart.command.help: true
+      simpleminecart.command.smctoggle: true
+#default-permission: op
