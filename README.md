@@ -15,4 +15,4 @@
 
 不具合があったら報告していただけると助かります。
 
-Copyright © 2021 Hibi_10000 All rights reserved.
+Copyright © 2021-2022 Hibi_10000
